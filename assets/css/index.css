@@ -388,3 +388,16 @@ nav ul {
 .socials img{
     width: 70px;
 }
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #D7DBF0;
+    color: #393737;
+    font-family: "Instrument Sans", sans;
+    font-weight: lighter;
+    padding: 10px;
+    border-top: 1px solid rgba(57, 55, 55, 0.222);
+}
