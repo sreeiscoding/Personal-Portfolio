@@ -178,37 +178,6 @@ nav ul {
     font-size: 64px;
     font-weight: bold;
 }
-/* close */
-/* .case_nav ul {
-    font-family: "Instrument Sans", sans;
-    font-weight: bold;
-    font-size: 30px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transform: translateY(57px);
-    gap: 4rem;
-}
-.case_nav li {
-    background-color: #000;
-    border: 6px solid #393737;
-    border-radius: 55px;
-    width: 250px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: inset 0 7px 20px 11px rgba(0, 0, 0), 0 7px 5px 0 rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-}
-.case_nav li a {
-    text-decoration: none;
-    color: #fff;
-} */
- /* close */
 .filter-buttons {
     display: flex;
     justify-content: center;
