@@ -1,0 +1,421 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #d9d9d9;
+}
+nav {
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+}
+nav h1 {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+}
+nav ul {
+    display: flex;
+    gap: 5rem;
+    font-size: 24px;
+    list-style: none;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+}
+
+.hero::before {
+    content: "";
+    background-image: linear-gradient(to bottom, rgba(215, 219, 240, 0) 0%, rgb(215, 219, 240) 100%);
+    width: 100%;
+    height: 31.25rem; /* 500px */
+    position: absolute;
+    bottom: -13.8125rem; /* -221px */
+}
+
+.container {
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+}
+.container h1{
+    font-family: "Instrument Serif", serif;
+    font-weight: lighter;
+    font-size: 96px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    word-spacing: 2px;
+    gap: 15px;
+}
+.container .highlight {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    color: 303032;
+    opacity: 59%;
+}
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 233px;
+  height: 107px;
+  background-color: #eee;
+  border-radius: 90px;   /* Rounded edges */
+  padding: 6px;
+  box-shadow: 7px 6px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  margin-top: 12px;
+  border: 9px solid #393737;
+}
+.icon img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15%;
+    margin-top: 34px;
+}
+.figma img {
+    width: 250px;
+    height: 163px;
+    border-radius: 15%;
+    margin-top: 15px;
+}
+.stack img {
+    width: 233px;
+    height: 118px;
+    border-radius: 15%;
+    margin-top: -4px;
+}
+.container p {
+    font-family: "Instrument Sans", sans;
+    font-size: 32px;
+    font-weight: 200;
+}
+.container button {
+    width: 329px;
+    height: 84px;
+    font-size: 24px;
+    font-weight: bold;
+    background: #000;
+    border-radius: 55px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    color: #fff;
+    margin-top: 5rem;
+    cursor: pointer;
+    font-family: "Instrument Sans", sans;
+    box-shadow: 0 6px 8px 2px rgba(0, 0, 0, 0.25);
+}
+.overlay::before {
+    content: "";
+    background-image: linear-gradient(to bottom, rgba(215, 219, 240, 0) 0%, rgb(215, 219, 240) 100%);
+    width: 100%;
+    height: 60vh;
+    bottom: -221px;
+    left: 0;
+    position: absolute;
+    /* overflow: hidden; */
+}
+.preview-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-55%) translateY(195px);
+    width: 100%;
+    z-index: -1;
+    height: 27vw;
+    overflow: hidden;
+    max-width: 1200px;
+}
+.preview-img .hero-preview {
+    width: 66rem;
+    max-width: 100%;
+    z-index: -1;
+    border-radius: 25px;
+}
+.preview-img .hero-preview-image {
+    width: 50rem;
+    max-width: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0rem;
+    /* z-index: -2; */
+    border-radius: 25px;
+    transform: translateY(127rem);
+}
+.projects {
+    width: 100%;
+    z-index: 999;
+    height: auto;
+    position: relative;
+    background-color: #D7DBF0;
+    transform: translateY(87px);
+    bottom: -64px;
+}
+.projects h1 {
+    text-align: center;
+    color: #000;
+    font-size: 64px;
+    font-weight: bold;
+}
+/* close */
+/* .case_nav ul {
+    font-family: "Instrument Sans", sans;
+    font-weight: bold;
+    font-size: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(57px);
+    gap: 4rem;
+}
+.case_nav li {
+    background-color: #000;
+    border: 6px solid #393737;
+    border-radius: 55px;
+    width: 250px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: inset 0 7px 20px 11px rgba(0, 0, 0), 0 7px 5px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.case_nav li a {
+    text-decoration: none;
+    color: #fff;
+} */
+ /* close */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    transform: translateY(57px);
+    margin-bottom: 2rem;
+}
+
+.filter-buttons button {
+    padding: 0.75rem 2rem; /* Adjusted padding for larger buttons */
+    border-radius: 55px;
+    width: 250px;
+    height: 80px;
+    background-color: #000;
+    border: 6px solid #393737;
+    color: #fff;
+    font-family: "Instrument Sans", sans;
+    font-size: 24px; /* Slightly larger font */
+    font-weight: bold;
+    box-shadow: inset 0 7px 20px 11px rgba(158, 158, 158, 0.249), 0 7px 5px 0 rgba(0, 0, 0, 0.359) !important;
+    cursor: pointer;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 10rem auto;
+}
+.project-card:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    width: 120%;
+    max-width: 120%;
+    /* transform: translateX(10px); */
+}
+.project-card:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 80%;
+    max-width: 120%;
+    transform: translateX(8rem);
+}
+.project-card {
+    position: relative;
+    background: #fff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    height: 300px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    user-select: none;
+}
+
+.project-card .category {
+    position: absolute;
+    top: 0rem;
+    left: -2rem;
+    background: #ff9500;
+    color: rgba(57, 55, 55, 0.762);
+    /* padding: 0.5rem 1rem; */
+    width: 194px;
+    height: 63px;
+    border-radius: 55px;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.project-card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%); /* Black gradient from transparent to 50% opacity */
+    z-index: 1;
+    border-radius: 1.5rem;
+}
+.project-card img {
+    width: 100%;
+    /* height: 220px; */
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-family: "Instrument Sansf", sans;
+    font-size: 24px; /* Slightly larger title */
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 10rem;
+    color: #fafafa;
+    z-index: 1;
+}
+
+.project-card p {
+    position: absolute;
+    bottom: 4rem;
+    font-family: "Instrument Sans", sans;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #ffffff;
+    padding: 0 1rem 1.5rem; /* More padding at the bottom */
+    line-height: 1.5;
+    z-index: 1;
+}
+.project-card button {
+    position: absolute;
+    width: 8rem;
+    bottom: 1rem;
+    font-family: "Instrument Sans", sans;
+    font-weight: bold;
+    z-index: 1;
+    left: 24px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 20px;
+    box-shadow: inset 0 7px 20px 11px rgba(155, 198, 218, 0.389), 0 7px 5px 0 rgba(150, 149, 149, 0.359) !important;
+    border-radius: 55px;cursor: pointer;
+}
+.about_me {
+    width: 100%;
+    background-color: #D7DBF0;
+    padding-top: 10rem;
+    height: auto;
+    padding-bottom: 3em;
+}
+.about_me h1 {
+    font-family: "Instrument Sans", sans;
+    font-weight: bold;
+    text-align: center;
+    font-size: 64px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.about_me p {
+    font-family: "Instrument Sans", sans;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 30px;
+}
+.about_me .highlight {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    color: 303032;
+    font-weight: lighter;
+    opacity: 59%;
+}
+.about_me .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.text {
+    width: 50%;
+    margin-top: 5rem;
+    transform: translateX(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text span {
+    font-family: "Instrument Sans", sans;
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: justify;
+    color: rgba(57, 55, 55, 0.764);
+}
+.text .highlight {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    color: 303032;
+    opacity: 59%;
+}
+.connect {
+    width: 100%;
+    background-color: #D7DBF0;
+    padding-top: 10rem;
+    height: auto;
+    padding-bottom: 3em;
+}
+.connect h1 {
+    text-align: center;
+    color: #000;
+    font-size: 64px;
+    font-weight: bold;
+}
+.socials ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    gap: 9rem;
+    margin-top: 3rem;
+}
+.socials img{
+    width: 70px;
+}
