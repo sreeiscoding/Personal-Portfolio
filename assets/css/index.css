@@ -211,6 +211,7 @@ nav ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 1200px;
+    align-content: start;
     margin: 10rem auto;
 }
 .project-card:nth-child(3) {
@@ -238,9 +239,9 @@ nav ul {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .project-card.hidden {
-    opacity: 0;
-    transform: scale(0.95);
-    pointer-events: none;
+    display: none;
+    /* transform: scale(0.95);
+    pointer-events: none; */
 }
 .project-card .category {
     position: absolute;
