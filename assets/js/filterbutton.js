@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Remove loading screen from DOM after fade-out
             loadingScreen.remove();
-        }, 800); // Match the fade-out transition duration
-    }, totalAnimationDuration - 400); // Start fade-out at the end of the circleToCapsule animation
+        }, 500); // Match the fade-out transition duration
+    }, totalAnimationDuration - 500); // Start fade-out at the end of the circleToCapsule animation
 
     // Existing filtering logic
     const filterButtons = document.querySelectorAll('.filter-buttons button');
