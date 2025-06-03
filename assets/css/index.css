@@ -214,6 +214,10 @@ nav ul {
     align-content: start;
     margin: 10rem auto;
 }
+.project-grid.single-card {
+    grid-template-columns: 1fr; /* Single column for one card */
+    justify-items: start; /* Align the card to the left (start) */
+}
 .project-card:nth-child(3) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
