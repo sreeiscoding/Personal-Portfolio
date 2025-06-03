@@ -24,9 +24,9 @@ nav {
     opacity: 0;
     transform: translateY(-50px);
     transition: all 0.3s ease-in;
-    animation: fadein 3s ease-in forwards, translate 4s ease-in forwards;
+    animation: fadein 3s ease-in forwards, translate-top 4s ease-in forwards;
 }
-@keyframes translate {
+@keyframes translate-top {
     0% {
         opacity: 0;
         transform: translateY(-50px);
