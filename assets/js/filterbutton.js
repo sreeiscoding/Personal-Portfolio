@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Existing filtering logic
     const filterButtons = document.querySelectorAll('.filter-buttons button');
-    const projectCards = document.querySelectorAll('.project-card');
+    const projectCards = document.querySelectorAll('.project-card, .no-website');
     const projectGrid = document.querySelector('.project-grid');
 
     filterButtons.forEach(button => {
