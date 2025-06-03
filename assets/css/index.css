@@ -21,6 +21,20 @@ nav {
     /* font-family: "Instrument Serif", serif; */
     font-family: "Alumni Sans", sans-serif;
     font-weight: 400;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.3s ease-in;
+    animation: fadein 3s ease-in forwards, translate 4s ease-in forwards;
+}
+@keyframes translate {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
 }
 nav h1 {
     /* font-family: "Instrument Serif", serif; */
@@ -88,6 +102,7 @@ nav ul {
   background-color: #eee;
   border-radius: 90px;   /* Rounded edges */
   padding: 6px;
+  animation: expand 4s ease-in-out forwards;
   box-shadow: 7px 6px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   margin-top: 12px;
@@ -132,6 +147,12 @@ nav ul {
     font-family: "Instrument Sans", sans;
     box-shadow: 0 6px 8px 2px rgba(0, 0, 0, 0.25);
 }
+.container h1.animate,
+.container p.animate,
+.container button.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
 .overlay::before {
     content: "";
     background-image: linear-gradient(to bottom, rgba(215, 219, 240, 0) 0%, rgb(215, 219, 240) 100%);
@@ -174,7 +195,7 @@ nav ul {
 /* Scroll Fade Animation */
 section {
     opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Slight upward movement for effect */
+    transform: translateY(40px); /* Slight upward movement for effect */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
 }
 
@@ -207,7 +228,7 @@ section.visible {
 }
 
 .filter-buttons button {
-    padding: 0.75rem 2rem; /* Adjusted padding for larger buttons */
+    padding: 0.75rem 2rem;
     border-radius: 55px;
     width: 250px;
     height: 80px;
@@ -215,14 +236,14 @@ section.visible {
     border: 6px solid #393737;
     color: #fff;
     font-family: "Instrument Sans", sans;
-    font-size: 24px; /* Slightly larger font */
+    font-size: 24px;
     font-weight: bold;
     box-shadow: inset 0 7px 20px 11px rgba(158, 158, 158, 0.249), 0 7px 5px 0 rgba(0, 0, 0, 0.359) !important;
-    cursor: pointer;
+    cursor: pointer !important;
 }
 .filter-buttons button.active {
     background: #D7DBF0;
-     box-shadow: inset 0 7px 20px 11px rgba(17, 41, 65, 0.249), 0 7px 5px 0 rgba(0, 0, 0, 0.359) !important;
+    box-shadow: inset 0 7px 20px 11px rgba(17, 41, 65, 0.249), 0 7px 5px 0 rgba(0, 0, 0, 0.359) !important;
     color: #393737;
 }
 .project-grid {
@@ -232,10 +253,14 @@ section.visible {
     max-width: 1200px;
     align-content: start;
     margin: 10rem auto;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 300s ease-in;
+    animation: fadein 6s ease-in forwards, translate 6s ease-in forwards;
 }
 .project-grid.single-card {
-    grid-template-columns: 1fr; /* Single column for one card */
-    justify-items: start; /* Align the card to the left (start) */
+    grid-template-columns: 1fr;
+    justify-items: start;
 }
 .project-card:nth-child(3) {
     grid-column: 1 / 2;
@@ -243,6 +268,16 @@ section.visible {
     width: 120%;
     max-width: 120%;
     /* transform: translateX(10px); */
+}
+@keyframes translate {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
 }
 .project-card:nth-child(4) {
     grid-column: 2 / 3;
@@ -259,7 +294,9 @@ section.visible {
     height: 300px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     user-select: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* opacity: 0; Initially hidden */
+    /* transform: translateY(20px); Start slightly below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .project-card.hidden {
     display: none;
@@ -291,7 +328,7 @@ section.visible {
     height: 300px;
     top: 0;
     left: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%); /* Black gradient from transparent to 50% opacity */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%); 
     z-index: 1;
     border-radius: 1.5rem;
 }
@@ -342,7 +379,7 @@ section.visible {
 .about_me {
     width: 100%;
     background-color: #D7DBF0;
-    padding-top: 10rem;
+    padding-top: 5rem;
     height: auto;
     padding-bottom: 3em;
 }
@@ -435,4 +472,124 @@ footer {
     font-weight: lighter;
     padding: 10px;
     border-top: 1px solid rgba(57, 55, 55, 0.222);
+}
+/* Loading Screen Styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #D7DBF0; /* Match body background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it’s above all other content */
+    opacity: 1;
+    transition: opacity 0.5s ease-out; /* Fade out effect */
+}
+
+.loading-screen.fade-out {
+    opacity: 0;
+    display: none;
+}
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 233px;
+  height: 107px;
+  background-color: #eee;
+  border-radius: 90px;
+  padding: 6px;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: popUpAndExpand 3s ease-in-out forwards;
+  box-shadow: 7px 6px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  margin-top: 12px;
+  border: 9px solid #393737;
+}
+.avatar img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15%;
+    margin-top: 34px;
+}
+.loading-screen .load {
+    opacity: 0;
+    animation: fadein 3s ease-in-out forwards;
+}
+.loading-screen .loader {
+    opacity: 0;
+    animation: fadeout 1s ease-in-out forwards;
+}
+.loading-screen .loader:nth-child(2) {
+    opacity: 0;
+    animation: fadeout 1.5s ease-in-out forwards;
+}
+.loading-screen .loader:nth-child(3) {
+    opacity: 0;
+    animation: fadeout 2s ease-in-out forwards;
+}
+@keyframes popUpAndExpand {
+    0% {
+        opacity: 0;
+        transform: translateY(100px); /* Start below the viewport */
+        width: 100px;
+        height: 100px;
+    }
+    50% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to center */
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        width: 233px;
+        height: 107px;
+    }
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+@keyframes fadeout {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes expand {
+    0% {
+        opacity: 0;
+        /* transform: translateY(-100px); */
+        width: 100px;
+        height: 100px;
+    }
+    50% {
+        opacity: 1; /* Fully visible */
+        /* transform: translateY(0); */
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        opacity: 1;
+        /* transform: translateY(0); */
+        width: 233px;
+        height: 107px;
+    }
 }

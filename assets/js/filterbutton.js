@@ -1,4 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Hide main content initially
+    const mainContent = document.querySelectorAll('nav, section');
+    mainContent.forEach(element => {
+        element.style.visibility = 'hidden';
+    });
+
+    // Loading screen logic
+    const loadingScreen = document.querySelector('.loading-screen');
+    const totalAnimationDuration = 3000; // 2000ms (circleToCapsule) + 500ms (fade-out)
+
+    setTimeout(() => {
+        // Fade out the loading screen
+        loadingScreen.classList.add('fade-out');
+
+        // Show main content and scroll to Hero section
+        setTimeout(() => {
+            mainContent.forEach(element => {
+                element.style.visibility = 'visible';
+            });
+
+            // Scroll to Hero section
+            document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
+
+            // Remove loading screen from DOM after fade-out
+            loadingScreen.remove();
+        }, 800); // Match the fade-out transition duration
+    }, totalAnimationDuration - 400); // Start fade-out at the end of the circleToCapsule animation
+
+    // Existing filtering logic
     const filterButtons = document.querySelectorAll('.filter-buttons button');
     const projectCards = document.querySelectorAll('.project-card');
     const projectGrid = document.querySelector('.project-grid');
@@ -33,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
 
     // Scroll fade animation logic
     const sections = document.querySelectorAll('section');
@@ -59,3 +87,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Immediately make the first section (hero) visible without scroll
     sections[0].classList.add('visible');
+});
