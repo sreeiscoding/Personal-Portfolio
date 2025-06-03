@@ -235,8 +235,13 @@ nav ul {
     height: 300px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     user-select: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
+.project-card.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
 .project-card .category {
     position: absolute;
     top: 0rem;

@@ -70,33 +70,33 @@
       <h1>Projects</h1>
       <div class="project-showcase">
         <div class="filter-buttons">
-          <button type="button" class="active">All</button>
-          <button type="button">UI/UX Designs</button>
-          <button type="button">Websites</button>
+          <button data-filter="all" type="button" class="active">All</button>
+          <button data-filter="designs" type="button">UI/UX Designs</button>
+          <button data-filter="websites" type="button">Websites</button>
         </div>
         <div class="project-grid">
-            <div class="project-card">
+            <div class="project-card" data-category="designs">
                 <span class="category">DESIGN</span>
                 <img src="/assets/images/CRM Dashboard-white mode.jpg" alt="CRM Dashboard project">
                 <h3>CRM Dashboard</h3>
                 <p>DevBoard Dashboard allows developers to analyze their income and expenses.</p>
                 <button>Open</button>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="designs">
                 <span class="category">DESIGN</span>
                 <img src="/assets/images/Lamoda-clothing-website.png" alt="LaMode website project">
                 <h3>LaMode</h3>
                 <p>Women's clothing website, Elegant website for women to dress. Eye-catching and easy-to-use interface.</p>
                 <button>Open</button>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="designs">
                 <span class="category">DESIGN</span>
                 <img src="/assets/images/Travecy-002.jpg" alt="Travecy project">
                 <h3>Travecy</h3>
                 <p>Travecy - Travel Agency allows users to book various travel destinations with low package and easy bookings.</p>
                 <button>Open</button>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-category="websites">
                 <span class="category">DESIGN</span>
                 <img src="/assets/images/Movie-website.png" alt="Intersteller project">
                 <h3>Intersteller</h3>
@@ -143,5 +143,7 @@
         <hr>
         <span>Made with Confidence.</span>
     </footer>
+
+    <script src="/assets/js/filterbutton.js"></script>
   </body>
 </html>
