@@ -470,6 +470,87 @@ section.visible {
   border-radius: 55px;
   cursor: pointer;
 }
+.what-i-do {
+    width: 100%;
+    z-index: 999;
+    height: auto;
+    position: relative;
+    background-color: #d7dbf0;
+    transform: translateY(87px);
+    padding: 15px;
+}
+.what-i-do h1 {
+    text-align: center;
+    color: #000;
+    font-size: 64px;
+    font-weight: bold;
+}
+.what-i-do .highlight {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  color: 303032;
+  font-weight: lighter;
+  opacity: 59%;
+}
+.what-i-provide {
+    width: 50%;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* background: rgba(28, 28, 28, 0.475); */
+    /* border: 2px solid #242424; */
+    border-radius: 25px;
+    /* box-shadow: 0 7px 5px 0 rgba(150, 149, 149, 0.359); */
+    transform: translateX(50%);
+    overflow: hidden;
+    position: relative;
+}
+.what-i-provide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-image: linear-gradient(
+    to bottom,
+    rgba(215, 219, 240, 0.845) 10%,
+    rgb(0, 76, 176) 100%
+  ); */
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+    /* z-index: 999; */
+}
+.what-i-provide .left-section {
+    padding: 15px;
+    z-index: 999;
+    color: #0000006d;
+    width: 100%;
+}
+.left-section p {
+    display: flex;
+    gap: 0.3rem;
+    font-size: 30px;
+    font-family: "Instrument Sans", sans;
+}
+.left-section ul {
+    width: 350px;
+    font-size: 24px;
+    padding: 12px;
+}
+.left-section li {
+    width: 100%;
+    padding: 12px;
+    border-radius: 55px;
+    margin-top: 10px;
+}
+.left-section .highlight {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  color: #303032;
+  font-weight: lighter;
+  opacity: 59%;
+}
 .about_me {
   width: 100%;
   background-color: #d7dbf0;
@@ -497,7 +578,7 @@ section.visible {
 .about_me .highlight {
   font-family: "Instrument Serif", serif;
   font-style: italic;
-  color: 303032;
+  color: #303032;
   font-weight: lighter;
   opacity: 59%;
 }
