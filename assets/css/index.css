@@ -64,6 +64,10 @@ nav h1 {
   font-weight: 400;
   font-size: 36px;
 }
+nav h1 a {
+    color: #000;
+    text-decoration: none;
+}
 nav ul {
   display: flex;
   justify-content: center;
@@ -71,6 +75,10 @@ nav ul {
   gap: 5rem;
   font-size: 24px;
   list-style: none;
+}
+nav li a {
+    color: #000;
+    text-decoration: none;
 }
 nav .status {
   width: auto;

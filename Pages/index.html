@@ -22,18 +22,18 @@
     </div>
     <header>
       <nav>
-        <h1>Sree⚡Web</h1>
+        <h1><a href="#hero">Sree⚡Web</a></h1>
         <ul>
-            <li class="status">
-                <span class="active-status"></span> 
-                Available
-            </li>
-            <li class="status">
-                <span class="close-status"></span> 
-                Not Open for client
-            </li>
-            <li>Projects</li>
-            <li>About Me</li>
+          <li class="status">
+            <span class="active-status"></span>
+            Available
+          </li>
+          <li class="status">
+            <span class="close-status"></span>
+            Not Open for client
+          </li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About Me</a></li>
         </ul>
       </nav>
     </header>
@@ -69,8 +69,12 @@
         </h1>
         <h1>based in <span class="highlight">Kerala</span>, India</h1>
         <p>Learning web development and UI/UX Designing my-self</p>
-        <button class="button" aria-label="Support Sree's work">
-            <a href="mailto:sreeiscoding@gmail.com">Click & Send I'm supporting you</a>
+        <button
+          class="button"
+          onclick="openGmailCompose()"
+          aria-label="Support Sree's work"
+        >
+          Send your support
         </button>
 
         <div class="preview-img">
@@ -87,7 +91,7 @@
         </div>
       </div>
     </section>
-    <section class="projects">
+    <section id="projects" class="projects">
       <h1>Projects</h1>
       <div class="project-showcase">
         <div class="filter-buttons">
@@ -143,56 +147,63 @@
                   alt="Travecy project"
                 />
                 <div></div>
-            </div>
-            <div class="card-right">
-              <h3>Travecy</h3>
-              <p>
-                Travecy - Travel Agency allows users to book various travel
-                destinations with low package and easy bookings.
-              </p>
-              <button>Open</button>
-            </div>
-            </div>
-        </div>
-        <div class="project-card" data-category="designs">
-          <span class="category">DESIGN</span>
-          <div class="card">
-            <div class="card-left">
-              <img
-                src="/assets/images/Movie-website.png"
-                alt="Intersteller project"
-              />
-            </div>
-            <div class="card-right">
-              <h3>Intersteller</h3>
-              <p>
-                Movie Website Design allows movie lovers to watch free
-                movies without ads.
-              </p>
-              <button>Open</button>
+              </div>
+              <div class="card-right">
+                <h3>Travecy</h3>
+                <p>
+                  Travecy - Travel Agency allows users to book various travel
+                  destinations with low package and easy bookings.
+                </p>
+                <button>Open</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="no-website" data-category="websites">
+          <div class="project-card" data-category="designs">
+            <span class="category">DESIGN</span>
+            <div class="card">
+              <div class="card-left">
+                <img
+                  src="/assets/images/Movie-website.png"
+                  alt="Intersteller project"
+                />
+              </div>
+              <div class="card-right">
+                <h3>Intersteller</h3>
+                <p>
+                  Movie Website Design allows movie lovers to watch free movies
+                  without ads.
+                </p>
+                <button>Open</button>
+              </div>
+            </div>
+          </div>
+          <div class="no-website" data-category="websites">
             <span>Opps!No websites.</span>
-        </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="what-i-do">
-        <h1>What I <span class="highlight">Do?</span></h1>
-        <div class="what-i-provide">
-            <div class="left-section">
-                <p>As a beginner<span class="highlight">UI/UX Designer</span> & <span class="highlight">Web Developer</span>:</p>
-                <ul>
-                    <li>To create Intuitive</li>
-                    <li>User-centric digital experiences</li>
-                </ul>
-                <p>I’m passionate about solving problems like poor usability, low engagement, and inefficient workflows through design and research, and I’m building my skills through practice projects.</p>
-            </div>
+      <h1>What I <span class="highlight">Do?</span></h1>
+      <div class="what-i-provide">
+        <div class="left-section">
+          <p>
+            As a beginner<span class="highlight">UI/UX Designer</span> &
+            <span class="highlight">Web Developer</span>:
+          </p>
+          <ul>
+            <li>To create Intuitive</li>
+            <li>User-centric digital experiences</li>
+          </ul>
+          <p>
+            I’m passionate about solving problems like poor usability, low
+            engagement, and inefficient workflows through design and research,
+            and I’m building my skills through practice projects.
+          </p>
         </div>
+      </div>
     </section>
-    <section class="about_me">
+    <section id="about" class="about_me">
       <span class="icon">
         <img
           src="/assets/images/d4f26e29-0714-4dd8-aaac-2579ef696fe9.jpeg"
@@ -255,5 +266,14 @@
     <script src="/assets/js/filterbutton.js"></script>
     <!-- <script src="/assets/js/sparkles.js"></script> -->
     <script src="/assets/js/celebration_sparkles.js"></script>
+    <script>
+      function openGmailCompose() {
+      const recipient = "sreeiscoding@gmail.com"; // Replace with your support email
+      const subject = encodeURIComponent("Drop me your warm support for my journey!");
+      const body = encodeURIComponent("");
+      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+      window.open(gmailLink, "_blank");
+    }
+    </script>
   </body>
 </html>
