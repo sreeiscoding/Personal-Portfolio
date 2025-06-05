@@ -70,12 +70,58 @@
         <h1>based in <span class="highlight">Kerala</span>, India</h1>
         <p>Learning web development and UI/UX Designing my-self</p>
         <button
+          id="supportButton"
           class="button"
           onclick="openGmailCompose()"
           aria-label="Support Sree's work"
         >
           Send your support
         </button>
+        <div id="supportModal" class="modal">
+          <div class="modal-content">
+            <h2>Send your support 💌</h2>
+            <p>
+              Share your support message to Sree⚡Web!
+            </p>
+            <form id="supportForm">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email Address"
+                required
+              />
+              <input type="email" name="to_email" id="toEmail" value="sreeseiscoding@gmail.com" readonly />
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value="Support Request"
+                required
+              />
+              <input
+                type="email"
+                name="reply_to"
+                placeholder="Reply-To Email"
+                required
+              />
+              <input type="email" name="cc" placeholder="CC (optional)" />
+              <input type="email" name="bcc" placeholder="BCC (optional)" />
+              <textarea
+                name="message"
+                placeholder="Support this legend"
+                required
+              ></textarea>
+              <input type="hidden" name="sent_time" id="sentTime" />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
 
         <div class="preview-img">
           <img
@@ -266,14 +312,50 @@
     <script src="/assets/js/filterbutton.js"></script>
     <!-- <script src="/assets/js/sparkles.js"></script> -->
     <script src="/assets/js/celebration_sparkles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <script>
-      function openGmailCompose() {
-      const recipient = "sreeiscoding@gmail.com"; // Replace with your support email
-      const subject = encodeURIComponent("Drop me your warm support for my journey!");
-      const body = encodeURIComponent("");
-      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
-      window.open(gmailLink, "_blank");
-    }
+      // Initialize EmailJS with your Public Key
+      (function () {
+        emailjs.init("zqZayA_ueYwKbVu--"); // Replace with your EmailJS Public Key
+      })();
+
+      // Open modal when button is clicked
+      document
+        .getElementById("supportButton")
+        .addEventListener("click", function () {
+          document.getElementById("supportModal").style.display = "flex";
+        });
+
+      // Handle form submission
+      document
+        .getElementById("supportForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Send email using EmailJS
+          emailjs.sendForm("service_p0b4jgm", "template_lq48p08", this).then(
+            function (response) {
+              console.log(
+                "Email sent successfully:",
+                response.status,
+                response.text
+              );
+              // Close modal
+              document.getElementById("supportModal").style.display = "none";
+              // Trigger celebration animation
+              const supportButton = document.getElementById("supportButton");
+              supportButton.classList.add("celebrate");
+              setTimeout(() => {
+                supportButton.classList.remove("celebrate");
+              }, 2000); // Matches animation duration (1s * 2 iterations)
+            },
+            function (error) {
+              console.error("Email sending failed:", error);
+              alert("Failed to send email: " + error.text);
+            }
+          );
+        });
     </script>
   </body>
 </html>
