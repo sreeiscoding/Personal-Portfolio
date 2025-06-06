@@ -31,5 +31,5 @@ function startSparkles() {
 startSparkles();
 
 window.addEventListener('resize', () => {
-    // Ensure sparkles adjust to window size changes
+    // Ensuring sparkles adjust to window size changes
 });

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Hide main content initially
+    // Hiding main content initially
     const mainContent = document.querySelectorAll('nav, section');
     mainContent.forEach(element => {
         element.style.visibility = 'hidden';
