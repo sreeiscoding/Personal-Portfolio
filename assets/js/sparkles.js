@@ -1,4 +1,4 @@
-const colors = ['#d7dbf0', '#333', 'violet'];
+const colors = ['#fff'];
 
 function createSparkle() {
     const sparkle = document.createElement('div');

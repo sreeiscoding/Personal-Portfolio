@@ -310,14 +310,14 @@
     </footer>
 
     <script src="/assets/js/filterbutton.js"></script>
-    <!-- <script src="/assets/js/sparkles.js"></script> -->
+    <script src="/assets/js/sparkles.js"></script>
     <script src="/assets/js/celebration_sparkles.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script>
       // Initialize EmailJS with your Public Key
       (function () {
-        emailjs.init("zqZayA_ueYwKbVu--"); // Replace with your EmailJS Public Key
+        emailjs.init("zqZayA_ueYwKbVu--"); // Public Key
       })();
 
       // Open modal when button is clicked
@@ -343,12 +343,12 @@
               );
               // Close modal
               document.getElementById("supportModal").style.display = "none";
-              // Trigger celebration animation
+
               const supportButton = document.getElementById("supportButton");
               supportButton.classList.add("celebrate");
               setTimeout(() => {
                 supportButton.classList.remove("celebrate");
-              }, 2000); // Matches animation duration (1s * 2 iterations)
+              }, 2000);
             },
             function (error) {
               console.error("Email sending failed:", error);
