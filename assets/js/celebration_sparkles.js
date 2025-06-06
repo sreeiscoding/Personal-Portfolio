@@ -1,4 +1,4 @@
-const paperColors = ['#ffff00', '#ff0000', '#ff69b4']; // Yellow, red, pink
+const paperColors = ['#ffff00', '#ff0000', '#ff69b4'];
 
 function createPaper() {
     const paper = document.createElement('div');

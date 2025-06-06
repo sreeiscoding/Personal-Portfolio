@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Remove loading screen from DOM after fade-out
             loadingScreen.remove();
         }, 500); // Match the fade-out transition duration
-    }, totalAnimationDuration - 500); // Start fade-out at the end of the circleToCapsule animation
+    }, totalAnimationDuration - 500); // Start fade-out
 
     // Existing filtering logic
     const filterButtons = document.querySelectorAll('.filter-buttons button');
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null, // Use the viewport as the root
         rootMargin: '0px',
-        threshold: 0.1 // Trigger when 10% of the section is visible
+        threshold: 0.01 // Trigger when 10% of the section is visible
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
