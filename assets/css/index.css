@@ -39,6 +39,7 @@ body {
 }
 
 nav {
+    width: 100%;
     padding: 2em;
     display: flex;
     justify-content: space-between;
@@ -47,6 +48,9 @@ nav {
     font-family: "Alumni Sans", sans-serif;
     font-weight: 400;
     opacity: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
     transform: translateY(-50px);
     transition: all 0.3s ease-in;
     animation: fadein 3s ease-in forwards, translate-top 4s ease-in forwards;
@@ -192,6 +196,7 @@ nav .status {
 .container {
     width: 100%;
     padding: 2rem;
+    margin: 5% auto;
     position: relative;
 }
 
@@ -420,7 +425,7 @@ nav .status {
             rgb(215, 219, 240) 100%);
     width: 100%;
     height: 60vh;
-    bottom: -221px;
+    bottom: -238px;
     left: 0;
     position: absolute;
 }
@@ -429,7 +434,7 @@ nav .status {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-55%) translateY(195px);
+    transform: translateX(-55%) translateY(300px);
     width: 100%;
     z-index: -1;
     height: 27vw;
@@ -469,10 +474,10 @@ section.visible {
 
 .projects {
     width: 100%;
-    z-index: 999;
+    /* z-index: -1; */
     height: auto;
     position: relative;
-    background-color: #d7dbf0;
+    /* background-color: #d7dbf0; */
     transform: translateY(87px);
     bottom: -64px;
 }
@@ -682,10 +687,10 @@ section.visible {
 
 .what-i-do {
     width: 100%;
-    z-index: 999;
+    /* z-index: 999; */
     height: auto;
     position: relative;
-    background-color: #d7dbf0;
+    /* background-color: #d7dbf0; */
     transform: translateY(87px);
     padding: 15px;
 }
