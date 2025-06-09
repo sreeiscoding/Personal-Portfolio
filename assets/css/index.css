@@ -1024,7 +1024,7 @@ footer {
 nav .mob-nav {
     display: none;
 }
-
+/* Mobile device Responsive */
 @media (max-width: 480px) {
     body {
         width: 100%;
