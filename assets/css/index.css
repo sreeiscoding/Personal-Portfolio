@@ -578,9 +578,10 @@ section.visible {
 
 .project-card {
     position: relative;
-    background: #fff;
+    /* background: #fff; */
     border-radius: 1.5rem;
     overflow: hidden;
+    border: 2px solid #fff;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     user-select: none;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -1024,6 +1025,7 @@ footer {
 nav .mob-nav {
     display: none;
 }
+
 /* Mobile device Responsive */
 @media (max-width: 480px) {
     body {
@@ -1239,5 +1241,34 @@ nav .mob-nav {
             width: 120px;
             height: 65px;
         }
+    }
+
+    .project-grid {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        align-content: start;
+        margin: 10rem auto;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 300s ease-in;
+        animation: fadein 6s ease-in forwards, translate 6s ease-in forwards;
+    }
+
+    .filter-buttons button {
+        padding: 0.75rem 2rem;
+        border-radius: 55px;
+        width: 107px;
+        height: 51px;
+        background-color: #000;
+        border: 6px solid #393737;
+        color: #fff;
+        font-family: "Instrument Sans", sans;
+        font-size: 20px;
+        font-weight: bold;
+        transition: transform 0.2s;
+        box-shadow: inset 0 7px 20px 11px rgba(158, 158, 158, 0.249), 0 7px 5px 0 rgba(0, 0, 0, 0.359) !important;
+        cursor: pointer !important; 
     }
 }
